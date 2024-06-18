@@ -3,7 +3,7 @@ class YouTubeDispatcher:
     def __init__(self):
         pass
     def downloadVideo(self, url, resolution, outpath) -> str:
-        """Download video with options:
+        """Опции для скачивания видео:
                 *resolution
                 *file_extension
                 *outpath
@@ -18,7 +18,7 @@ class YouTubeDispatcher:
         return f"{outpath}"
 
     def searchVideo(self, url) -> dict:
-        """Get information about video"""
+        """Получает информацию о видео"""
         yt_object = YouTube(url)
         streams=yt_object.streams
         resolutions_video = sorted(set(stream.resolution for stream in streams.filter(type='video')), reverse=True, key=lambda s: int(s.split('p')[0]))
@@ -28,6 +28,4 @@ class YouTubeDispatcher:
                   "video_streams":resolutions_video}
         print(out_dict)
         return out_dict
-f=YouTubeDispatcher()
-f.searchVideo("https://www.youtube.com/watch?v=ZuW_sMSrEXg&t=0s&ab_channel=GalileoRU")
-f.downloadVideo("https://www.youtube.com/watch?v=GnlFmiLuVXc&ab_channel=ViteC%E2%96%BAPlay", "360p", "D:\DownloadS")
+
