@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Управление ботом</h1>
+    </header>
+    <nav>
+        <button onclick="redirectTo('/add')">Добавить инфоповод</button>
+        <button onclick="redirectTo('https://example.com')">Расслать сообщение</button>
+        <button onclick="redirectTo('https://example.com')">Статистика</button>
+        <!-- Добавьте другие кнопки с соответствующими URL -->
+    </nav>
+
+    <section>
+        <h2>Дополнительная информация</h2>
+        <p>Здесь может быть какая-то дополнительная информация, текст или контент.</p>
+    </section>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

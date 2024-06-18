@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение формы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Заполнение формы</h1>
+    </header>
+
+    <form action="/api/add/" method="post" enctype="multipart/form-data">
+        <label for="date">Выберите дату:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="files">Выберите файл:</label>
+        <input type="file" id="preview" name="files[]" accept=".jpg, .jpeg, .png">>
+
+        <label for="title">Название:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Описание:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="files">Выберите файлы:</label>
+        <input type="file" id="files" name="files[]" multiple required>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        // Можете добавить логику обработки формы, если необходимо
+    </script>
+</body>
+
+</html>
