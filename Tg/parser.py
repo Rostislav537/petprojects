@@ -1,8 +1,8 @@
 from telethon import TelegramClient
 import time
 
-api_id=28839615
-api_hash = "b72e5b12e67df719c3cb2367c1c6681c"
+api_id=0
+api_hash = ""
 
 client=TelegramClient("test_tg", api_id, api_hash)
 
