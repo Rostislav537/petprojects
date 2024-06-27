@@ -1,7 +1,7 @@
 import requests
 
 # Замените 'your_bot_token' на токен вашего бота
-bot_token = '6501361576:AAHTO-MDxa7IZaSW77Ksn4OoPEth_eI0tLQ'
+bot_token = ''
 chat_id = '6525924165'  # Замените 'your_chat_id' на ID чата, куда вы хотите отправить фото
 
 url = f'https://api.telegram.org/bot{bot_token}/sendPhoto'
